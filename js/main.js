@@ -30,7 +30,7 @@ $(function () {
             jqueryDom.remove();
             clearInterval(timer);
         }
-    }, 10);
+    }, random_timer);
     timers.push(timer);
   }
 
@@ -159,7 +159,8 @@ $(function () {
   for (var i = 0; i < messages.length; i++) {
     var message = messages[i];
     var jqueryDom = createScreenbullet(message);
-    addInterval(jqueryDom);
+    var random_timer = Math.floor(Math.random() * 300);
+    (function(random_timer){setTimeout(addInterval(jqueryDom), random_timer);})(random_timer);
   }
 
 });
