@@ -159,7 +159,7 @@ $(function () {
   for (var i = 0; i < messages.length; i++) {
     var message = messages[i];
     var jqueryDom = createScreenbullet(message);
-    var random_timer = Math.floor(Math.random() * 300);
+    var random_timer = Math.floor(Math.random() * 3000);
     (function(random_timer){setTimeout(addInterval(jqueryDom), random_timer);})(random_timer);
   }
 
