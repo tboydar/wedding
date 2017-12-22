@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>大家的 Free Style</title>
-    <link rel="stylesheet" href="./css/barrager.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Hsu's Wedding</title>
+  <style>
+  .video-x {
+    position: relative;
+    width: 100%;
+    margin: auto;
+  }
+
+  .canvas-barrage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-placeholder {
+    height: 800px;
+    background-color: #000;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+  }
+  </style>
 </head>
+
 <body>
+
 <div class="video-x">
   <canvas id="canvasBarrage" class="canvas-barrage" width="100%" height="100%"></canvas>
   <div class="video-placeholder"></div>
@@ -30,11 +52,6 @@ var dataBarrage = [
 	value: '江政達 / 謝宜芳：早生貴子',
 	color: 'black',
 	range: [0, 0.5]
-},
-{
-	value: '李孟陽： 旭哥終於也走到人生的這一步了， 大大大大恭喜啦. ^O^。',
-	color: 'black',
-	range: [0,0.5]
 },
 {
 	value: '葉玫君：小芋頭，恭喜妳。要幸福喔',
@@ -708,4 +725,3 @@ var canvasBarrage = function (canvas, data) {
 canvasBarrage('#canvasBarrage', dataBarrage);
 </script>
 </body>
-</html>
